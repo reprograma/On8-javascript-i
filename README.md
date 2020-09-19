@@ -1,5 +1,10 @@
 Tópicos da Aula:
 
+# Instruções:
+
+Após clonar o repositório da aula, copie a pasta template, cole dentro da pasta entrega e renomeie com seu nome.
+_ATENÇÃO_ Não modifique o conteúdo da pasta template original, apenas a que você copiou e renomeou.
+
 # Adicionando javascript no HTML
 
 Para referenciar o arquivo JS a ser utilizado pelo HTML usaremos a tag `<script>`. O atributo `src` deve informar o caminho do seu arquivo JS.
@@ -41,13 +46,15 @@ DOM é uma sigla que significa **Document Object Model.** Quando a página é ca
 - **Text** - é o conteúdo de texto que vai entre os elementos (tags).
 - **Attribut** - são os todos atributos para um nó específico. No caso, o attribute class="HERO" está associado ao elemento, outros exemplos de atributos são o href, o id, entre outros.
 
+![Capa do Slide](./assets/dom2.jpg)
+
 ---
 
 ## Manipulando o DOM
 
 O DOM é a representação do objeto do documento HTML e atua como uma interface de programação que permite a manipulação de sua estrutura com o JavaScript ou outras linguagens.
 
-Podemos manipular o DOM para realizar alterações na estrutura do HTML, alterar estilos e modificar conteúdos.
+Podemos manipular o DOM para realizar alterações na estrutura do HTML, alterar estilos, modificar conteúdos e adicionar diversos eventos.
 
 ![Capa do Slide](./assets/dom.gif)
 
@@ -120,7 +127,7 @@ Semelhante ao querySelector(), só que retorna todos os elementos que se equipar
 
 Para selecionar apenas um elemento pelo `id`, é mais viável utlizar `document.getElementById` pois o mesmo é específico para essa finalidade. Caso precise de uma seleção mais avançada, use `document.querySelector` pelo fato de ter a liberdade de utilizar seletores CSS, o que é uma grande vantagem além de ser mais performático para o browser.
 
-### **Sintaxe**:
+### **Sintaxe para seletores**:
 
 ```js
 document.getElementById('nome-id');
@@ -229,6 +236,55 @@ Defina a propriedade value:
 input.value = texto;
 ```
 
+---
+
+## Criar, inserir e excluir elementos da árvore DOM.
+
+A função `document.createElement()` aceita como parâmetro o nome da tag e retorna o elemento recém criado (mas ainda não inserido).
+
+```javascript
+let novaTag = document.createElement('p');
+```
+
+Inserimos o elemento com a função `appendChild()`, mas ainda precisamos criar um conteúdo (nó de texto) para o elemento `<p>`, caso contrário, estaremos inserindo apenas o elemento, sem texto. Para criar um nó de texto utilizaremos a função `document.createTextNode()`.
+
+```javascript
+let texto = document.createTextNode('meu texto novo');
+```
+
+Antes de inserir o elemento, devemos atribuir o nó de texto a ele. Ou seja, referenciar corretamente o elemento pai ao elemento filho.
+
+```javascript
+novaTag.appendChild(texto);
+```
+
+O Novo elemento existe e tem conteúdo, porém ainda não foi inserido no html existente. Para isso utilizaremos a função `document.querySelector('.nome-da-classe')` e selecionaremos o nó onde o novo elemento que criamos será inserido.
+
+```javascript
+let minhaDiv = `document.querySelector('.classe-da-div')`;
+```
+
+Ou seja, agora com o elemento completo, podemos então, anexá-lo a um elemento <div> já existente em nossa página HTML. A função `appendChild()` insere o novo elemento filho ao final do elemento pai.
+
+```javascript
+minhaDiv.appendChild(novaTag);
+```
+
+É possível inserir um elemento através da função insertBefore(), ela aceita dois parâmetros: o primeiro é o elemento filho e o segundo é o elemento que servirá de referência para inserir o elemento filho.
+Para remover um elemento utilizamos a função removeChild().
+
+## Sintaxe Criar elementos
+
+```javascript
+document.createElement("nome-da-tag") para criar um elemento
+document.createTextNode("algum texto") para criar um nó de texto
+elementoPai.appendChild(elementoFilho) para inserir um elemento na última posição
+elementoPai.insertBefore(elementoFilho, elementoAnterior) pra inserir um elemento em posição específica
+elementoPai.removeChild(elementoFilho) para remover um elemento
+```
+
+---
+
 ## Métodos do DOM para manipular CSS
 
 O DOM HTML permite que o JavaScript mude o estilo dos elementos HTML.
@@ -239,9 +295,7 @@ Para alterar o estilo de um elemento HTML, use esta sintaxe:
 elemento.style.property = novo estilo
 ```
 
-<!-- ## Manipulando elementos HTML
-
-src -->
+---
 
 ## Adicionar e remover classes do HTML pelo Javascript
 
@@ -274,23 +328,4 @@ elemento.classList.add('classe');
 elemento.classList.remove('classe');
 ```
 
-## Eventos no Javascript - submit
-
-O evento de envio é acionado quando o formulário é enviado, geralmente é usado para validar o formulário antes de enviá-lo ao servidor ou para interromper o envio e processá-lo em JavaScript.
-
-O método form.submit() permite iniciar o envio de formulários a partir do JavaScript. Podemos usá-lo para criar e enviar dinamicamente nossos próprios formulários para o servidor.
-
-## Validações com condicionais
-
-`focus()`
-
-O método focus() é usado para dar foco a um elemento (se ele puder ser focado).
-
-```javascript
-elemento.focus();
-```
-
 ---
-
-Regex https://regexr.com/ *extra
-Objeto Date e seus métodos *extra
