@@ -5,6 +5,10 @@ Tópicos da Aula:
 Após clonar o repositório da aula, copie a pasta template, cole dentro da pasta entrega e renomeie com seu nome.
 _ATENÇÃO_ Não modifique o conteúdo da pasta template original, apenas a que você copiou e renomeou.
 
+### Façam suas perguntas através do DontPad
+
+[http://dontpad.com/t8-on-js](http://dontpad.com/t8-on-js)
+
 # Adicionando javascript no HTML
 
 Para referenciar o arquivo JS a ser utilizado pelo HTML usaremos a tag `<script>`. O atributo `src` deve informar o caminho do seu arquivo JS.
