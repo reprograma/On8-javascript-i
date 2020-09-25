@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyBank</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="transacao">
+            <h1 class="transacao__title title">Controle Financeiro MyBank</h1>
+            <h2 class="transacao__subtitle subtitle">Adicionar Gastos</h2>
+            <form action="" class="transacao__form">
+                <div class="transacao__form-group">
+                    <label for="transacaoInputName" class="transacao__label">Meu último gasto</label>
+                    <input type="text" class="transacao__input" id="transacaoInputName"
+                        placeholder="Insira aqui o seu último gasto">
+                </div>
+                <div class="transacao__form-group">
+                    <label for="transacaoInputMoney" class="transacao__label">Valor</label>
+                    <input type="number" class="transacao__input" id="transacaoInputMoney" placeholder="R$ 0,00">
+                </div>
+                <div class="transacao__form-group">
+                    <label for="transacaoInputDate" class="transacao__label">Data</label>
+                    <input type="text" class="transacao__input" id="transacaoInputDate" placeholder="dd/mm/aaaa">
+                </div>
+                <div class="transacao__form-group">
+                    <button class="button transacao__button">Adicionar novo gasto</button>
+                </div>
+            </form>
+        </div>
+        <div class="extrato">
+            <h2 class="extrato__subtitle subtitle">Relatório de Gastos</h2>
+            <div class="extrato__table">
+                <h2 class="extrato__header">
+                    <span>Nome da transação</span>
+                    <span>Valor</span>
+                    <span>Data</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <script src="./script/script.js"></script>
+</body>
+
+</html>
