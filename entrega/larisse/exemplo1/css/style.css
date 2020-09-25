@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #1d8dc0;
+  background-image: url('../../../../assets/news.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.news {
+  width: 30%;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: rgba(76, 0, 255, 0.274);
+}
+
+.news__title {
+  color: #ffffff;
+  top: -130px;
+}
+
+.news__title__novo {
+  color: #b91212;
+  top: -130px;
+  font-size: 50px;
+  text-decoration: dashed;
+}
+/* 
+.news__form {
+} */
+
+.news__form-group {
+  position: relative;
+  width: 100%;
+}
+
+.news__label {
+  display: block;
+  color: #ffffff;
+}
+
+.news__input {
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  height: 40px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.error {
+  border: 3px solid #ff0101;
+  color: #ff0101;
+}
+
+.news__button {
+  background-color: #ecddf3;
+  color: #000000;
+  border-radius: 50px;
+  border: 0;
+  padding: 10px 20px;
+  width: 130px;
+  position: absolute;
+  bottom: -50px;
+  font-weight: bold;
+  left: 50%;
+  margin-left: -65px;
+  font-size: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.news__button:hover {
+  background-color: #053c55;
+  color: #ffffff;
+  transition: 0.3s;
+}
