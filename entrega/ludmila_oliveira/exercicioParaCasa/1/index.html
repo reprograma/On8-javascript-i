@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Calcule a sua média</h1>
+    <div name="calculo">
+      <p>Nota PROVA 1:</p>
+      <input class="nota1" type="text"  maxlength="5" min="0" max="10"  placeholder="Digite um valor entre 0 e 10" onkeyup="tratarNumero(this);">
+      <!-- Esse this significa que o elemento (e parametros) que está nesse input vão ser passados para a função no JS -->
+      <p>Nota PROVA 2:</p>
+      <input class="nota2" type="text" maxlength="5" min="0" max="10"  placeholder="Digite um valor entre 0 e 10"  onkeyup="tratarNumero(this);">
+      <p id="button">Calcular Média</p>
+      <p class="media-titulo">Sua média é:<span class="media"> </span></p>
+    </div>
+  </div>
+
+  <script src="./script/script.js"></script>
+</body>
+
+</html>
