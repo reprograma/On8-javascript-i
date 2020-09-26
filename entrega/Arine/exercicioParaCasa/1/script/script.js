@@ -11,7 +11,9 @@
 
 // Validar campos de input para não aceitar valores vazios e formatos inválidos
 
-// ATENÇÃO - LEMBRE-SE QUE PARA TRANSFORMAR STRING(texto) EM NÚMERO É NECESSÁRIO UTILIZAR FUNÇÕES, PEQUISE parseInt ou parseFloat
+// ATENÇÃO - LEMBRE-SE QUE PARA TRANSFORMAR STRING(texto) EM NÚMERO É NECESSÁRIO UTILIZAR FUNÇÕES,
+// PEQUISE parseInt ou parseFloat
+
 
 const botaoCalcular = document.querySelector('#button');
 const mensagem = document.querySelector('.media-titulo');

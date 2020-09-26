@@ -5,6 +5,7 @@
 //Alterar a cor do texto caso o email tenha sido cadastrado com sucesso
 //Validar se os campos estão vazios ou não
 
+
 let input = document.querySelector('#newsInputEmail');
 let button = document.querySelector('.button');
 let mensagem = document.querySelector(".mensagem")
